@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Admin | Huellas Amarillas</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+</head><body class="admin-body">
+<header class="admin-top"><a href="/" class="brand"><img src="assets/logo.png" alt=""><span>Huellas Amarillas</span></a><strong>Panel privado</strong></header>
+<main class="admin-main">
+<section id="loginBox" class="admin-login"><span class="kicker">ACCESO PRIVADO</span><h1>Validar preventas</h1><p>Solo las reservas que confirmes aquí aumentan el contador público.</p><label>Clave de administrador<input id="adminKey" type="password" autocomplete="current-password" placeholder="Tu clave privada"></label><button id="loginBtn" class="btn btn-primary">Entrar</button></section>
+<section id="adminPanel" hidden>
+<div class="admin-toolbar"><div><span class="kicker">RESERVAS</span><h1>Panel de pagos</h1><small id="adminCount"></small></div><div class="admin-toolbar-actions"><select id="statusFilter"><option value="pending">Pendientes</option><option value="paid">Pagados</option><option value="cancelled">Cancelados</option><option value="all">Todos</option></select><button id="refreshBtn" class="btn btn-ghost">Actualizar</button><button id="logoutBtn" class="btn btn-ghost">Salir</button></div></div>
+<div id="ordersList" class="admin-orders"></div>
+</section><p id="adminStatus" class="form-status"></p></main><script src="admin.js"></script></body></html>
